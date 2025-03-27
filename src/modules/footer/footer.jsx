@@ -9,7 +9,6 @@ import { useModal } from '../shared/hooks/ModalContext';
 const Footer = () => {
   const { t, i18n } = useTranslation('footer');
   const { isModalOpen, toggleModal } = useModal();
-  
 
   return (
     <footer className="xl:pb-[130px] xl:pt-[100px] md:pb-[80px] pb-15 pt-10 md:pt-10 bg-[#0D0121]">
