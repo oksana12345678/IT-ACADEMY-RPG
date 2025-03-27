@@ -45,6 +45,7 @@ export default async function RootLayout({ children, params }) {
           <ErrorBoundaryWithTranslation>
             {children}
           </ErrorBoundaryWithTranslation>
+          <div id="modal"></div>
         </body>
       </TranslationsProvider>
     </html>

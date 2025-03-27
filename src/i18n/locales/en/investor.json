@@ -1,11 +1,14 @@
 {
   "title": "Why It's Valuable for Investors",
   "cards": [
-    { "icon": "", "desc": "The growing IT education market." },
+    { "icon": "/box.png", "desc": "The growing IT education market." },
     {
-      "icon": "",
+      "icon": "/many.png",
       "desc": "Monetization (paid quests, subscriptions, affiliate programs)."
     },
-    { "icon": "", "desc": "MVP already launched: first users are onboard." }
+    {
+      "icon": "/letter.png",
+      "desc": "MVP already launched: first users are onboard."
+    }
   ]
 }

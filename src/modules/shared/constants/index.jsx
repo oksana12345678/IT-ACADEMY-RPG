@@ -6,4 +6,6 @@ export const NAMESPACES = [
   'howItWorks',
   'forWhoThis',
   'investor',
+  'footer',
+  'teamList',
 ];

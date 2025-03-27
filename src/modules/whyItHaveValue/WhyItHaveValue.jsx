@@ -3,12 +3,13 @@ import { useTranslation } from 'react-i18next';
 import Container from '../shared/components/Container/Container';
 import Section from '../shared/components/Section/Section';
 import Image from 'next/image';
+import { forwardRef } from 'react';
 
-const WhyItHaveValue = () => {
+const WhyItHaveValue = forwardRef(({}, ref) => {
   const { t } = useTranslation('investor');
 
   return (
-    <Section>
+    <Section id="investors" ref={ref}>
       <Container className="flex flex-col gap-6">
         <h2 className="text-[#FF9900] font-semibold text-3xl">{t('title')}</h2>
         <ul className="flex flex-col gap-6">
@@ -27,6 +28,6 @@ const WhyItHaveValue = () => {
       </Container>
     </Section>
   );
-};
+});
 
 export default WhyItHaveValue;

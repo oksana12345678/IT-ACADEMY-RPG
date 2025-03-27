@@ -1,0 +1,19 @@
+{
+  "list": [
+    {
+      "name": "Alexander",
+      "surname": "Gretsky",
+      "position": "CEO, Manager"
+    },
+    {
+      "name": "Oksana",
+      "surname": "Tanashchuk",
+      "position": "Frontend Developer"
+    },
+    {
+      "name": "Natalia",
+      "surname": "Aseeva",
+      "position": "UX/UI Designer"
+    }
+  ]
+}
