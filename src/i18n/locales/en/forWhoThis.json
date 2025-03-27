@@ -1,0 +1,17 @@
+{
+  "title": "For Whom It Is",
+  "cards": [
+    {
+      "title": "Beginners in IT:",
+      "desc": "The first step into the profession through gamification."
+    },
+    {
+      "title": "Specialists: ",
+      "desc": "Skill development and achievement validation."
+    },
+    {
+      "title": "Companies: ",
+      "desc": "Companies: Talent search through game mechanics."
+    }
+  ]
+}
