@@ -4,6 +4,7 @@ import ForWho from '@/modules/forWho/ForWho';
 import Header from '@/modules/header/Header';
 import Hero from '@/modules/hero/Hero';
 import HoveItWorks from '@/modules/hoveItWorks/HoveItWorks';
+import WhyItHaveValue from '@/modules/whayItHaveValue/WhyItHaveValue';
 import { useEffect, useRef } from 'react';
 
 export default function Home() {
@@ -25,7 +26,7 @@ export default function Home() {
 
         <HoveItWorks ref={howItWorksRef} />
         <ForWho ref={forWhoThisRef} />
-        <section ref={investorsRef} id="investors"></section>
+        <WhyItHaveValue ref={investorsRef} id="investors"></WhyItHaveValue>
         <section ref={contactsRef} id="contacts"></section>
       </main>
     </div>

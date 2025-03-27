@@ -5,6 +5,7 @@ import i18nConfig from '../../../i18nConfig';
 import initTranslations from '@/i18n/utils/i18n';
 import { TranslationsProvider } from '@/i18n/utils';
 import ErrorBoundaryWithTranslation from '@/modules/shared/components/ErrorBoundary/ErrorBoundaryWithTranslation/ErrorBoundaryWithTranslation';
+import { dir } from 'i18next';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -23,7 +24,6 @@ export const metadata = {
 
 const i18nNamespaces = NAMESPACES;
 
-// eslint-disable-next-line react-refresh/only-export-components
 export function generateStaticParams() {
   return i18nConfig.locales.map((locale) => ({ locale }));
 }
@@ -33,14 +33,14 @@ export default async function RootLayout({ children, params }) {
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
 
   return (
-    <html lang="en">
+    <html lang={locale} dir={dir(locale)}>
       <TranslationsProvider
         namespaces={i18nNamespaces}
         locale={locale}
         resources={resources}
       >
         <body
-          className={` ${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <ErrorBoundaryWithTranslation>
             {children}
