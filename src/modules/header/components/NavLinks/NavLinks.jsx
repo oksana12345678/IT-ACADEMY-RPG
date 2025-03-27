@@ -1,11 +1,13 @@
 'use client';
 import { useNavigationLinks } from '@/modules/shared/hooks/useNavigationLinks';
+import clsx from 'clsx';
 
 const NavLinks = ({
   howItWorksRef,
   forWhoThisRef,
   investorsRef,
   contactsRef,
+  className,
 }) => {
   const { navLinks } = useNavigationLinks();
 
@@ -26,12 +28,12 @@ const NavLinks = ({
 
   return (
     <nav>
-      <ul className="flex gap-4">
+      <ul className={clsx('md:flex md:gap-4', className)}>
         {Object.entries(navLinks).map(([key, { href, text }]) => (
           <li key={key}>
             <button
               onClick={() => handleScrollToSection(href)}
-              className="cursor-pointer bg-transparent border-none"
+              className="cursor-pointer bg-transparent border-none md:text-base xl:text-xl"
             >
               {text}
             </button>

@@ -1,5 +1,5 @@
+// Modal.js
 'use client';
-
 import clsx from 'clsx';
 import { useCallback, useEffect, useMemo, useRef } from 'react';
 import { createPortal } from 'react-dom';
@@ -49,7 +49,7 @@ export default function Modal({ open, onClose, children, className }) {
 
   return createPortal(
     <dialog
-      className="w-[1024px] h-[600px] fixed top-[50%] left-[50%] bg-[#090116] bg-opacity-50 z-50 transform -translate-x-1/2 -translate-y-1/2 rounded-b-md"
+      className="xl:w-[1024px] h-[600px] md:w-[620px] fixed top-[50%] left-[50%] bg-[#090116] bg-opacity-50 z-50 transform -translate-x-1/2 -translate-y-1/2 rounded-b-md"
       ref={dialogRef}
       onCancel={onClose}
       onClick={handleBackdropClick}
