@@ -36,18 +36,20 @@ const HoveItWorks = forwardRef(({}, ref) => {
       </div>
       <Container>
         <ul className="flex flex-col md:justify-between md:flex-row gap-8">
-          <li className=" md:hidden text-base  font-light flex flex-col gap-3">
-            <Image
-              src="/adventurer.png"
-              layout="responsive"
-              width={1200}
-              height={477}
-              alt="roles"
-            />
+          <li className=" md:hidden  text-base  font-light flex flex-col gap-3">
+            <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+              <Image
+                src="/adventurer.png"
+                layout="responsive"
+                width={1200}
+                height={477}
+                alt="roles"
+              />
+            </div>
             <p>{t('adventurer')}</p>
           </li>
           <li className="xl:w-[300px] md:w-50 xl:text-xl text-base font-light md:font-normal flex flex-col gap-3">
-            <div className="md:hidden ">
+            <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] md:hidden">
               <Image
                 src="/avatarB.png"
                 layout="responsive"
@@ -57,14 +59,13 @@ const HoveItWorks = forwardRef(({}, ref) => {
                 className="md:hodden"
               />
             </div>
-
             <p>{t('avatar')}</p>
           </li>
           <li className="xl:w-[300px] md:w-50 xl:text-xl md:text-base font-normal hidden md:block">
             <p>{t('adventurer')}</p>
           </li>
           <li className="xl:w-[300px] md:w-50 xl:text-xl text-base font-light md:font-normal flex flex-col gap-3">
-            <div className="md:hidden ">
+            <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] md:hidden">
               <Image
                 src="/kingdom.png"
                 layout="responsive"

@@ -1,7 +1,7 @@
 {
   "links": {
     "hove_it_works": { "href": "#how_it_works", "text": "Як це працює" },
-    "for_whu_this": { "href": "#for_who_this", "text": "Для кого це?" },
+    "for_whu_this": { "href": "#for_who_this", "text": "Для кого це" },
     "investors": { "href": "#investors", "text": "Інвесторам" },
     "contacts": { "href": "#contacts", "text": "Контакти" }
   }

@@ -24,7 +24,9 @@ const Hero = () => {
             className="flex w-full  gap-2.5 bg-[#7C01F8] xl:h-[64px] xl:w-[408px] md:w-[328px] h-[60px] rounded-lg font-semibold uppercase xl:text-2xl md:text-xl items-center xl:py-5 xl:px-10 md:px-6 justify-center"
           >
             {t('btn_text')}
-            <img src="/icons/fly.svg" alt="Fly Icon" className="w-6" />
+            <div className="w-6 h-6">
+              <img src="/icons/fly.svg" alt="Fly Icon" className="w-6" />
+            </div>
           </Link>
           <p className=" xl:w-[680px] xl:text-xl font-normal text-base md:w-[592]">
             {t('desc')}

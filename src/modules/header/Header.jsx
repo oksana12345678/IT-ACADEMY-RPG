@@ -2,9 +2,10 @@ import { useState } from 'react';
 import Link from 'next/link';
 import LangSwitcher from './components/LangSwitcher/LangSwitcher';
 import NavLinks from './components/NavLinks/NavLinks';
+import BurgerButton from './components/BurgerButton/BurgerButton';
+import Image from 'next/image';
 
 const Header = ({
-  t,
   howItWorksRef,
   forWhoThisRef,
   investorsRef,
@@ -19,25 +20,7 @@ const Header = ({
   return (
     <header className="bg-[#150320DB] w-screen fixed z-50 ">
       <div className="flex items-center justify-between px-5 xl:px-21 md:px-11">
-        <button
-          className="xl:hidden md:hidden block text-white"
-          onClick={toggleMenu}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-8 h-8"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
+        <BurgerButton toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
         <Link href={'/'} className="xl:w-20 w-15">
           <img src="/LOGO_RPG.svg" alt="Logo" />
         </Link>
@@ -47,19 +30,29 @@ const Header = ({
             forWhoThisRef={forWhoThisRef}
             investorsRef={investorsRef}
             contactsRef={contactsRef}
-            className="hidden"
+            className="hidden md:flex"
           />
           <LangSwitcher />
         </div>
       </div>
       {isMenuOpen && (
-        <div className="xl:hidden flex flex-col items-center bg-[#150320DB] py-6">
+        <div className="xl:hidden flex flex-col just items-start bg-[#090116]  fixed w-full h-screen px-10 py-20">
           <NavLinks
             howItWorksRef={howItWorksRef}
             forWhoThisRef={forWhoThisRef}
             investorsRef={investorsRef}
             contactsRef={contactsRef}
+            className="gap-4 flex-col pb-13"
+            toggleMenu={toggleMenu}
           />
+          <div className="w-full flex  justify-center">
+            <Image
+              src="/big_letter.png"
+              width={200}
+              height={200}
+              alt="letter"
+            />
+          </div>
         </div>
       )}
     </header>

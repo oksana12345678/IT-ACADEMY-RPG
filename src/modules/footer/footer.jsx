@@ -18,41 +18,47 @@ const Footer = () => {
           <div className="flex xl:flex-col  gap-8 md:justify-between">
             <ul className="flex flex-col md:gap-5 xl:gap-[30px] gap-4">
               <li className="flex gap-5">
-                <img
-                  src="/icons/arcticons_fossify-phone.svg"
-                  alt="Phone Icon"
-                  className="w-6"
-                />
+                <div className="w-6 h-6 xl:w-8 xl:h-8">
+                  <img
+                    src="/icons/arcticons_fossify-phone.svg"
+                    alt="Phone Icon"
+                    className="w-6"
+                  />
+                </div>
                 <Link
                   href={`tel:${t('contacts.phone')}`}
-                  className="text-xl font-light"
+                  className="md:text-xl font-light text-base"
                   target="_blank"
                 >
                   {t('contacts.phone')}
                 </Link>
               </li>
               <li className="flex gap-5">
-                <img
-                  src="/icons/arcticons_fairemail.svg"
-                  alt="Email Icon"
-                  className="w-6"
-                />
+                <div className="w-6 h-6 xl:w-8 xl:h-8">
+                  <img
+                    src="/icons/arcticons_fairemail.svg"
+                    alt="Email Icon"
+                    className="w-6"
+                  />
+                </div>
                 <Link
                   href={`mailto:${t('contacts.email')}`}
-                  className="text-xl font-light"
+                  className="md:text-xl font-light text-base"
                   target="_blank"
                 >
                   {t('contacts.email')}
                 </Link>
               </li>
               <li className="flex gap-5">
-                <img
-                  src="/icons/ph_microsoft-teams-logo-thin.svg"
-                  alt="Teams Icon"
-                  className="w-6"
-                />
+                <div className="w-6 h-6 xl:w-8 xl:h-8">
+                  <img
+                    src="/icons/ph_microsoft-teams-logo-thin.svg"
+                    alt="Teams Icon"
+                    className="w-6"
+                  />
+                </div>
                 <button
-                  className="text-xl font-light cursor-pointer"
+                  className="md:text-xl font-light text-base cursor-pointer"
                   type="button"
                   onClick={toggleModal}
                 >
@@ -60,17 +66,19 @@ const Footer = () => {
                 </button>
               </li>
               <li className="flex gap-5">
-                <img src="/icons/fly.svg" alt="Fly Icon" className="w-6" />
+                <div className="w-6 h-6 xl:w-8 xl:h-8">
+                  <img src="/icons/fly.svg" alt="Fly Icon" />
+                </div>
                 <Link
                   target="_blank"
-                  href="https://t.me/itacademy_rpg"
-                  className="text-xl font-light"
+                  href="https://t.me/tanoksa_bot"
+                  className="md:text-xl font-light text-base"
                 >
                   {t('contacts.telegram')}
                 </Link>
               </li>
             </ul>
-            <div className="md:flex gap-5 xl:hidden hidden">
+            <div className="md:flex gap-5 xl:hidden hidden ">
               <img src="/decor.png" alt="Decor" className="w-50" />
             </div>
           </div>

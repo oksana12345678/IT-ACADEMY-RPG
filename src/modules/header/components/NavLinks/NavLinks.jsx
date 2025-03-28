@@ -8,6 +8,7 @@ const NavLinks = ({
   investorsRef,
   contactsRef,
   className,
+  toggleMenu,
 }) => {
   const { navLinks } = useNavigationLinks();
 
@@ -23,12 +24,13 @@ const NavLinks = ({
     const sectionRef = sectionRefs[sectionId];
     if (sectionRef && sectionRef.current) {
       sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      toggleMenu();
     }
   };
 
   return (
     <nav>
-      <ul className={clsx('md:flex md:gap-4', className)}>
+      <ul className={clsx('flex md:gap-4', className)}>
         {Object.entries(navLinks).map(([key, { href, text }]) => (
           <li key={key}>
             <button

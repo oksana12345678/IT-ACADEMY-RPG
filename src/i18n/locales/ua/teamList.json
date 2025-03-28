@@ -1,4 +1,5 @@
 {
+  "title": "Команда",
   "list": [
     {
       "name": "Олександр",
@@ -11,8 +12,43 @@
       "position": "Frontend розробник"
     },
     {
+      "name": "Олександра",
+      "surname": "Атаманенко",
+      "position": "Продукт-менеджер"
+    },
+    {
+      "name": "Марко",
+      "surname": "Кобрінчук",
+      "position": "Frontend розробник"
+    },
+    {
+      "name": "Владлена",
+      "surname": "Белдяха",
+      "position": "QA тестувальник"
+    },
+    {
+      "name": "Никита",
+      "surname": "Дробишевський",
+      "position": "Python Backend розробник"
+    },
+    {
+      "name": "Микита",
+      "surname": "Калюжний",
+      "position": "Python Backend розробник"
+    },
+    {
+      "name": "Олександр",
+      "surname": "Марценюк",
+      "position": "Python Backend розробник"
+    },
+    {
       "name": "Наталя",
       "surname": "Асєєва",
+      "position": "UX/UI дизайнер"
+    },
+    {
+      "name": "Олександр",
+      "surname": "",
       "position": "UX/UI дизайнер"
     }
   ]
