@@ -3,59 +3,30 @@
 import { useLanguageChanger } from '@/i18n/utils/LanguageChanger';
 import { LANGUAGES } from '@/modules/shared/constants';
 import { useEffect, useRef, useState } from 'react';
-import { useTranslation } from 'react-i18next'; 
+import { useTranslation } from 'react-i18next';
 
 const LangSwitcher = () => {
   const { currentLocale, handleChangeLanguage } = useLanguageChanger();
-  const { i18n } = useTranslation(); 
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
-  const buttonRef = useRef(false);
-
-  const toggleDropdown = () => setIsDropdownOpen((prev) => !prev);
+  const { i18n } = useTranslation();
 
   const handleLanguageChange = (lng) => {
     localStorage.setItem('language', lng);
 
     i18n.changeLanguage(lng).then(() => {
       handleChangeLanguage(lng);
-      setIsDropdownOpen(false);
-      window.location.reload();
     });
+    // window.location.reload();
   };
 
   useEffect(() => {
     const storedLanguage = localStorage.getItem('language');
     if (storedLanguage) {
-      i18n.changeLanguage(storedLanguage); 
+      i18n.changeLanguage(storedLanguage);
     }
-
-    const handleClickOutside = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setIsDropdownOpen(false);
-      }
-    };
-
-    const handleEscPress = (e) => {
-      if (e.key === 'Escape' && isDropdownOpen) {
-        setIsDropdownOpen(false);
-        buttonRef.current.blur();
-      }
-    };
-
-    if (isDropdownOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-      document.addEventListener('keydown', handleEscPress);
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('keydown', handleEscPress);
-    };
-  }, [isDropdownOpen, i18n]);
+  }, [i18n]);
 
   return (
-    <div className="" ref={dropdownRef}>
+    <div className="">
       <div>
         <ul className="flex gap-2 items-center">
           <li

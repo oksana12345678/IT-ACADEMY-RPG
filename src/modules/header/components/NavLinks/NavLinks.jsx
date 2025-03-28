@@ -24,8 +24,8 @@ const NavLinks = ({
     const sectionRef = sectionRefs[sectionId];
     if (sectionRef && sectionRef.current) {
       sectionRef.current.scrollIntoView({ behavior: 'smooth' });
-      toggleMenu();
     }
+    toggleMenu();
   };
 
   return (

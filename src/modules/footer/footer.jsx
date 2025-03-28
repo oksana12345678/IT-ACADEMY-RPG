@@ -1,21 +1,56 @@
 'use client';
+
 import { useTranslation } from 'react-i18next';
 import Container from '../shared/components/Container/Container';
 import Link from 'next/link';
 import Modal from '../shared/components/modal/modal';
 import TeamList from './components/TeamList/TeamList';
-import { useModal } from '../shared/hooks/ModalContext';
+import React, { useState, useEffect } from 'react';
 
-const Footer = () => {
+const Footer = ({ params }) => {
   const { t, i18n } = useTranslation('footer');
-  const { isModalOpen, toggleModal } = useModal();
+  const [modalState, setModalState] = useState(false);
+  const locale = React.use(params).locale; 
+  useEffect(() => {
+    const storedModalState = localStorage.getItem('modalState');
+    if (storedModalState === 'open') {
+      setModalState(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    const storedModalState = localStorage.getItem('modalState');
+    if (storedModalState === 'open') {
+      setModalState(true);
+    }
+  }, [i18n.language]);
+
+  useEffect(() => {
+    if (modalState) {
+      localStorage.setItem('modalState', 'open');
+    } else {
+      localStorage.setItem('modalState', 'closed');
+    }
+  }, [modalState]);
+
+  const handleLanguageChange = (lng) => {
+    localStorage.setItem('language', lng);
+    i18n.changeLanguage(lng).then(() => {
+      window.location.reload();
+    });
+  };
+
+  const handleModalToggle = () => {
+    setModalState(!modalState);
+    handleLanguageChange(locale);
+  };
 
   return (
     <footer className="xl:pb-[130px] xl:pt-[100px] md:pb-[80px] pb-15 pt-10 md:pt-10 bg-[#0D0121]">
       <Container className="flex flex-col md:gap-8 gap-5">
         <h2 className="text-[#FF9900] font-semibold text-3xl">{t('title')}</h2>
-        <div className="flex xl:justify-between flex-col-reverse xl:flex-row  md:gap-[60px] gap-10 ">
-          <div className="flex xl:flex-col  gap-8 md:justify-between">
+        <div className="flex xl:justify-between flex-col-reverse xl:flex-row md:gap-[60px] gap-10">
+          <div className="flex xl:flex-col gap-8 md:justify-between">
             <ul className="flex flex-col md:gap-5 xl:gap-[30px] gap-4">
               <li className="flex gap-5">
                 <div className="w-6 h-6 xl:w-8 xl:h-8">
@@ -60,7 +95,7 @@ const Footer = () => {
                 <button
                   className="md:text-xl font-light text-base cursor-pointer"
                   type="button"
-                  onClick={toggleModal}
+                  onClick={handleModalToggle}
                 >
                   {t('contacts.team')}
                 </button>
@@ -95,7 +130,7 @@ const Footer = () => {
           </div>
         </div>
       </Container>
-      <Modal open={isModalOpen} onClose={toggleModal}>
+      <Modal open={modalState} onClose={handleModalToggle}>
         <TeamList />
       </Modal>
     </footer>

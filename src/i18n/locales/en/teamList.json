@@ -1,8 +1,8 @@
 {
   "list": [
     {
-      "name": "Alexander",
-      "surname": "Gretsky",
+      "name": "Oleksandr",
+      "surname": "Gretskij",
       "position": "CEO, Manager"
     },
     {
@@ -11,8 +11,43 @@
       "position": "Frontend Developer"
     },
     {
+      "name": "Oleksandra",
+      "surname": "Atamanenko",
+      "position": "Project Manager"
+    },
+    {
+      "name": "Marko ",
+      "surname": "Kobrinchuk",
+      "position": "Frontend Developer"
+    },
+    {
+      "name": "Vladlena ",
+      "surname": "Beldiaha",
+      "position": "QA"
+    },
+    {
+      "name": " Nikita ",
+      "surname": "Drobyshevskyi",
+      "position": "Python Backend Developer"
+    },
+    {
+      "name": "Mykyta ",
+      "surname": "Kaliuzhnyi",
+      "position": "Python Backend Developer"
+    },
+    {
+      "name": " Oleksandr  ",
+      "surname": "Martseniuk",
+      "position": "Python Backend Developer"
+    },
+    {
       "name": "Natalia",
       "surname": "Aseeva",
+      "position": "UX/UI Designer"
+    },
+    {
+      "name": "Oleksandr",
+      "surname": "",
       "position": "UX/UI Designer"
     }
   ]

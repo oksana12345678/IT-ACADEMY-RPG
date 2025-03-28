@@ -9,7 +9,7 @@ import { ModalProvider } from '@/modules/shared/hooks/ModalContext';
 import WhyItHaveValue from '@/modules/whyItHaveValue/WhyItHaveValue';
 import { useRef } from 'react';
 
-export default function Home() {
+export default function Home({ params }) {
   const howItWorksRef = useRef(null);
   const forWhoThisRef = useRef(null);
   const investorsRef = useRef(null);
@@ -33,7 +33,7 @@ export default function Home() {
           <section ref={contactsRef} id="contacts"></section>
         </main>
 
-        <Footer />
+        <Footer params={params} />
       </div>
     </ModalProvider>
   );
