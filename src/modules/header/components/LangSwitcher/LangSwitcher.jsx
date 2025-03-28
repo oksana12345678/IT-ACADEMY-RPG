@@ -1,7 +1,7 @@
 'use client';
 
 import { useLanguageChanger } from '@/i18n/utils/LanguageChanger';
-import { LANGUAGES } from '@/modules/shared/constants';
+import { LANGUAGES } from '@/shared/constants';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

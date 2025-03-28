@@ -1,10 +1,10 @@
 'use client';
 
 import { useTranslation } from 'react-i18next';
-import Container from '../shared/components/Container/Container';
+import Container from '../../shared/components/Container/Container';
 import Image from 'next/image';
 import { forwardRef } from 'react';
-import Section from '../shared/components/Section/Section';
+import Section from '../../shared/components/Section/Section';
 
 const HoveItWorks = forwardRef(({}, ref) => {
   const { t } = useTranslation('howItWorks');

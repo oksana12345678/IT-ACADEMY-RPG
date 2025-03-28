@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
-import Container from '../shared/components/Container/Container';
+import Container from '../../shared/components/Container/Container';
 import { useTranslation } from 'react-i18next';
-import Section from '../shared/components/Section/Section';
+import Section from '../../shared/components/Section/Section';
 
 const ForWho = forwardRef(({}, ref) => {
   const { t } = useTranslation('forWhoThis');

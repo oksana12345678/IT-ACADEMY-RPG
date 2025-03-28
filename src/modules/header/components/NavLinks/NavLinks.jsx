@@ -1,5 +1,5 @@
 'use client';
-import { useNavigationLinks } from '@/modules/shared/hooks/useNavigationLinks';
+import { useNavigationLinks } from '@/shared/hooks/useNavigationLinks';
 import clsx from 'clsx';
 
 const NavLinks = ({

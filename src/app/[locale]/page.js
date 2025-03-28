@@ -5,7 +5,7 @@ import ForWho from '@/modules/forWho/ForWho';
 import Header from '@/modules/header/Header';
 import Hero from '@/modules/hero/Hero';
 import HoveItWorks from '@/modules/hoveItWorks/HoveItWorks';
-import { ModalProvider } from '@/modules/shared/hooks/ModalContext';
+import { ModalProvider } from '@/shared/hooks/ModalContext';
 import WhyItHaveValue from '@/modules/whyItHaveValue/WhyItHaveValue';
 import { useRef } from 'react';
 

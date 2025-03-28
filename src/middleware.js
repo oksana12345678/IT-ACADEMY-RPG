@@ -1,6 +1,6 @@
 import { i18nRouter } from 'next-i18n-router';
 import { NextResponse } from 'next/server';
-import { LANGUAGES } from './modules/shared/constants';
+import { LANGUAGES } from './shared/constants';
 import i18nConfig from '../i18nConfig';
 
 export default function middleware(request) {

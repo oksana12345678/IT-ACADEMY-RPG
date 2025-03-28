@@ -1,16 +1,16 @@
 'use client';
 
 import { useTranslation } from 'react-i18next';
-import Container from '../shared/components/Container/Container';
+import Container from '../../shared/components/Container/Container';
 import Link from 'next/link';
-import Modal from '../shared/components/modal/modal';
+import Modal from '../../shared/components/modal/modal';
 import TeamList from './components/TeamList/TeamList';
 import React, { useState, useEffect } from 'react';
 
 const Footer = ({ params }) => {
   const { t, i18n } = useTranslation('footer');
   const [modalState, setModalState] = useState(false);
-  const locale = React.use(params).locale; 
+  const locale = React.use(params).locale;
   useEffect(() => {
     const storedModalState = localStorage.getItem('modalState');
     if (storedModalState === 'open') {

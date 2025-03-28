@@ -1,7 +1,7 @@
 'use client';
 import { useTranslation } from 'react-i18next';
-import Container from '../shared/components/Container/Container';
-import Section from '../shared/components/Section/Section';
+import Container from '../../shared/components/Container/Container';
+import Section from '../../shared/components/Section/Section';
 import { forwardRef } from 'react';
 
 const WhyItHaveValue = forwardRef(({}, ref) => {
