@@ -1,6 +1,6 @@
 'use client';
 
-import Footer from '@/modules/footer/Footer';
+import Footer from '@/modules/footer/footer';
 import ForWho from '@/modules/forWho/ForWho';
 import Header from '@/modules/header/Header';
 import Hero from '@/modules/hero/Hero';
