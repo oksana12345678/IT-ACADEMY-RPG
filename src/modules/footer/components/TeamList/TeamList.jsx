@@ -16,7 +16,10 @@ const getColorClass = (position) => {
     position.toLowerCase().includes('дизайн')
   )
     return colorMapping.design;
-  if (position.toLowerCase().includes('менеджер' || 'Manager'))
+  if (
+    position.toLowerCase().includes('менеджер') ||
+    position.toLowerCase().includes('manager')
+  )
     return colorMapping.manager;
   if (position.toLowerCase().includes('qa')) return colorMapping.qa;
   return 'bg-gray-300';
