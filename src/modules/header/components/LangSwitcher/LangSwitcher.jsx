@@ -31,23 +31,23 @@ const LangSwitcher = () => {
         <ul className="flex gap-2 items-center">
           <li
             onClick={() => handleLanguageChange(LANGUAGES.UA)}
-            className={`items-center text-base font-medium flex gap-2 after:content-[''] after:block  after:w-0.5 after:h-5 after:bg-[#B3B3B3] after:bottom-0 ${
+            className={`items-center text-base font-medium flex gap-2 after:content-[''] after:block  after:w-0.5 after:h-5 after:bg-[#B3B3B3] after:bottom-0 cursor-pointer ${
               currentLocale === LANGUAGES.UA
                 ? 'text-[#DDD7CF]'
                 : 'text-[#838282]'
             }`}
           >
-            <span>UA</span>
+            <span className="cursor-pointer">UA</span>
           </li>
           <li
             onClick={() => handleLanguageChange(LANGUAGES.EN)}
-            className={`text-base font-medium ${
+            className={`text-base font-medium cursor-pointer ${
               currentLocale === LANGUAGES.EN
                 ? 'text-[#DDD7CF]'
                 : 'text-[#838282]'
             }`}
           >
-            <span>EN</span>
+            <span className="cursor-pointer">EN</span>
           </li>
         </ul>
       </div>
